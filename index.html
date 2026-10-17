@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MX Notes — Team Names Notebook</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>MX Notes — Team Names Notebook</h1>
+      <p class="subtitle">Type one team/word per line. It saves automatically and shows simple stats.</p>
+    </header>
+
+    <section class="controls">
+      <div class="left">
+        <label for="lines">Notebook (one item per line)</label>
+        <textarea id="lines" placeholder="Type team names here, one per line"></textarea>
+        <div class="buttons">
+          <button id="clear">Clear</button>
+          <button id="export-json">Export JSON</button>
+          <button id="export-csv">Export CSV</button>
+          <input id="fileImport" type="file" accept=".json,text/json,.csv,.txt" />
+        </div>
+      </div>
+
+      <aside class="stats" aria-live="polite">
+        <h2>Statistics</h2>
+        <div class="summary">
+          <div>Total items: <span id="total">0</span></div>
+          <div>Unique items: <span id="unique">0</span></div>
+        </div>
+        <ul id="freqList" class="freq-list"></ul>
+      </aside>
+    </section>
+
+    <footer>
+      <small>Auto-saved locally (in your browser). You can export to backup or import a file.</small>
+    </footer>
+  </main>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>
