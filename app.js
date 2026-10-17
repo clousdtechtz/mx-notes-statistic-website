@@ -37,7 +37,7 @@ textarea.addEventListener('input', () => {
   updateStatus();
 });
 
-ttextarea.addEventListener('click', updateStatus);
+textarea.addEventListener('click', updateStatus);
 textarea.addEventListener('keyup', updateStatus);
 textarea.addEventListener('select', updateStatus);
 

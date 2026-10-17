@@ -7,43 +7,42 @@ html, body {
   min-height: 100%;
   height: 100%;
   font-family: Arial, Helvetica, sans-serif;
-  background: #3c3c3c;
+  background: #3d3d3d;
 }
 
 body {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 20px 16px 10px;
+  display: block;
+  padding: 18px 16px 10px;
 }
 
 .page-shell {
   width: 100%;
-  max-width: 1000px;
+  max-width: 980px;
+  margin: 0 auto;
 }
 
 .notepad-window {
   width: 100%;
-  background: #d2d2d2;
-  border: 1px solid #5e5e5e;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  background: #d4d4d4;
+  border: 1px solid #4a4a4a;
   overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .crumb-bar {
   display: flex;
   align-items: center;
   gap: 8px;
-  height: 40px;
+  height: 44px;
   padding: 0 16px;
-  background: #6a6a6a;
-  color: #f4f4f4;
+  background: #5d5d5d;
+  color: #f5f5f5;
   font-size: 15px;
   font-weight: 600;
 }
 
 .crumb-bar .sep {
-  opacity: 0.75;
+  opacity: 0.8;
 }
 
 .crumb-bar .current {
@@ -52,31 +51,34 @@ body {
 
 .menu-bar {
   display: flex;
-  gap: 12px;
-  height: 38px;
+  align-items: center;
+  gap: 18px;
+  height: 42px;
   padding: 0 10px;
-  background: #cfcfcf;
+  background: #d0d0d0;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.18);
 }
 
 .menu-bar button {
   border: 0;
   background: transparent;
   font-size: 13px;
-  color: #2d2d2d;
+  color: #2e2e2e;
+  line-height: 1;
   cursor: pointer;
-  padding: 0 6px;
+  padding: 0 4px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .toolbar {
   display: flex;
   align-items: center;
   gap: 10px;
-  min-height: 54px;
-  padding: 8px 12px 6px;
-  background: #d9d9d9;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+  height: 60px;
+  padding: 8px 12px 7px;
+  background: #d7d7d7;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.16);
 }
 
 .tool-btn {
@@ -85,10 +87,10 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 4px;
-  color: #3f3f3f;
+  color: #4a4a4a;
   padding: 0;
   cursor: pointer;
 }
@@ -104,14 +106,12 @@ body {
 }
 
 .tool-btn.add-btn {
-  margin-left: 6px;
+  margin-left: 4px;
 }
 
 .editor-shell {
+  background: #ece7af;
   position: relative;
-  background: #ebe7b3;
-  padding: 0;
-  min-height: 420px;
 }
 
 .editor-shell::before {
@@ -121,51 +121,52 @@ body {
   top: 0;
   bottom: 0;
   width: 3px;
-  background: #d25757;
+  background: #d95b5b;
 }
 
 #notepad {
   width: 100%;
-  min-height: 420px;
+  min-height: 450px;
   height: 520px;
-  resize: none;
   border: 0;
-  background-color: #ebe7b3;
+  resize: none;
+  background-color: #ebdf9d;
   background-image: repeating-linear-gradient(
     to bottom,
     transparent 0,
-    transparent 22px,
-    rgba(196, 75, 75, 0.8) 22px,
-    rgba(196, 75, 75, 0.8) 23px,
-    transparent 23px,
-    transparent 24px
+    transparent 24px,
+    rgba(214, 72, 72, 0.82) 24px,
+    rgba(214, 72, 72, 0.82) 25px,
+    transparent 25px,
+    transparent 26px
   );
-  color: #1b1b1b;
+  color: #1a1a1a;
   line-height: 24px;
   font-size: 14px;
   letter-spacing: 0.02em;
-  padding: 0 14px 0 18px;
+  padding: 0 12px 0 18px;
   outline: none;
   font-family: "Courier New", monospace;
+  box-shadow: none;
 }
 
 #notepad::selection {
-  background: rgba(84, 126, 255, 0.3);
+  background: rgba(0, 90, 255, 0.2);
 }
 
 .status-bar {
   display: flex;
   align-items: center;
-  height: 24px;
-  padding: 0 12px;
-  background: #dadada;
-  border-top: 1px solid rgba(0, 0, 0, 0.25);
-  color: #2d2d2d;
+  height: 25px;
+  padding: 0 9px;
+  background: #d9d9d9;
+  border-top: 1px solid rgba(0, 0, 0, 0.28);
+  color: #222;
   font-size: 12px;
   font-weight: 600;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 700px) {
   body {
     padding: 10px 6px 8px;
   }
@@ -176,7 +177,7 @@ body {
   }
 
   .menu-bar {
-    gap: 8px;
+    gap: 10px;
     overflow-x: auto;
   }
 
